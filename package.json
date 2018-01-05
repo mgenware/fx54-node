@@ -1,0 +1,45 @@
+{
+  "name": "makhulu",
+  "version": "0.0.1",
+  "description": "A smart task runner",
+  "main": "dist/lib/main.js",
+  "types": "dist/lib/main.d.ts",
+  "author": "Mgen (https://www.mgenware.com)",
+  "homepage": "https://github.com/mgenware/makhulu",
+  "bugs": "https://github.com/mgenware/makhulu/issues",
+  "keywords": [
+    "task runner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgenware/makhulu.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "copyfiles": "*",
+    "mocha": "*",
+    "tslint": "*",
+    "typescript": "*"
+  },
+  "scripts": {
+    "test": "yarn run clean && yarn run compile && yarn run lint && yarn run copy && mocha \"dist/test/*.js\"",
+    "dev_test": "mocha \"dist/test/*.js\"",
+    "build": "yarn test",
+    "compile": "tsc",
+    "dev": "yarn run clean && tsc -w",
+    "prepublishOnly": "yarn run test",
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "copy": "copyfiles \"test/data/**/*.*\" \"dist\"",
+    "clean:dist": "rm -rf dist",
+    "clean": "npm run clean:dist"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "isobject": "^3.0.1",
+    "m-fs": "^1.0.0"
+  }
+}
