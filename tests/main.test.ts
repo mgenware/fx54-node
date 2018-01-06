@@ -1,6 +1,6 @@
 import main from '../lib/main';
 
-function resolve(file: string): string {
+function resolve(file: string = ''): string {
   return `./tests/data/${file}`;
 }
 
@@ -16,5 +16,24 @@ describe('validateFile', () => {
   });
   test('bool(false) rejected', async () => {
     await expect(main.validateFileAsync(resolve('a.txt'), false)).rejects.toThrow();
+  });
+
+  test('string resolved', async () => {
+    await expect(main.validateFileAsync(resolve('a.txt'), 'test')).resolves.toBeUndefined();
+  });
+  test('string rejected', async () => {
+    await expect(main.validateFileAsync(resolve('a.txt'), '__')).rejects.toThrow();
+  });
+  test('string rejected (file not found)', async () => {
+    await expect(main.validateFileAsync(resolve('b.txt'), '__')).rejects.toThrow();
+  });
+});
+
+describe('validateDirectory', () => {
+  test('validateFileAsync resolved', async () => {
+    await expect(main.validateDirectoryAsync(resolve(), {root: {child: {'b.txt': 'test'}}})).resolves.toBeUndefined();
+  });
+  test('validateFileAsync rejected', async () => {
+    await expect(main.validateDirectoryAsync(resolve(), {root: {child: {'b.txt': '__'}}})).rejects.toThrow();
   });
 });

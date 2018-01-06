@@ -9,7 +9,7 @@ export default class Validator {
     } else if (checker.isBoolean(value)) {
       await this.validateBoolAsync(path, value as boolean);
     } else {
-      throw new Error(`Unsupported value: ${value}`);
+      throw new Error(`Unsupported value: ${value ? value.toString() : '<Empty>'}`);
     }
   }
 
