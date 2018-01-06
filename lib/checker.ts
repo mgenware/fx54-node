@@ -1,4 +1,4 @@
-import * as isObject from 'isobject';
+const isObject = require('isobject');
 import { Buffer } from 'buffer';
 
 export default class Checker {

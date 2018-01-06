@@ -16,7 +16,9 @@
         "ordered-imports": false,
         "object-literal-sort-keys": false,
         "max-classes-per-file": false,
+        "no-any": false,
         "strict-type-predicates": true,
+        "max-line-length": false,
         "strict-boolean-expressions": [
             true,
             "allow-null-union",
