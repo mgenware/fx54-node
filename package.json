@@ -1,18 +1,18 @@
 {
   "name": "fx54-node",
   "version": "0.0.1",
-  "description": "A smart task runner",
+  "description": "Verify existence or content of files in a hierarchical object",
   "main": "dist/lib/main.js",
   "types": "dist/lib/main.d.ts",
   "author": "Mgen (https://www.mgenware.com)",
-  "homepage": "https://github.com/mgenware/makhulu",
-  "bugs": "https://github.com/mgenware/makhulu/issues",
+  "homepage": "https://github.com/mgenware/fx54-node",
+  "bugs": "https://github.com/mgenware/fx54-node/issues",
   "keywords": [
     "task runner"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgenware/makhulu.git"
+    "url": "https://github.com/mgenware/fx54-node.git"
   },
   "license": "MIT",
   "devDependencies": {
