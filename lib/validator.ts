@@ -13,15 +13,23 @@ export default class Validator {
     }
   }
 
-  async validateDirectoryAsync(path: string, obj: any) {
+  async validateDirectoryAsync(path: string, obj: any, logger: ((path: string, isFile: boolean) => void)|null = null) {
     const keys = Object.keys(obj);
     for (const k of keys) {
       const value = obj[k];
       const subPath = nodepath.join(path, k);
 
       if (checker.isObject(value)) {
+        if (logger) {
+          logger(subPath, false);
+        }
+
         await this.validateDirectoryAsync(subPath, value);
       } else {
+        if (logger) {
+          logger(subPath, true);
+        }
+
         await this.validateFileAsync(subPath, value);
       }
     }
