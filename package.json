@@ -1,6 +1,6 @@
 {
   "name": "fx54-node",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Verify existence or content of files with a hierarchical object",
   "main": "dist/lib/main.js",
   "types": "dist/lib/main.d.ts",
