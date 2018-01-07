@@ -6,6 +6,18 @@
 
 Verify existence or content of files with a hierarchical object.
 
+## Installation
+```sh
+yarn add fx54-node
+```
+
+### Run tests
+```sh
+yarn test
+```
+
+## Example
+Directory structure:
 ```
 - root
   - dir1
@@ -14,6 +26,7 @@ Verify existence or content of files with a hierarchical object.
     b.txt
 ```
 
+Example code:
 ```javascript
 import validator from 'fx54-node';
 
@@ -48,7 +61,7 @@ try {
       file1: true,
     },
     subDirB: {
-      file2: '<contents>`,
+      file2: "<contents>",
     },
   },
   file3: false,
