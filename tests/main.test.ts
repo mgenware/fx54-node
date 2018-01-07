@@ -1,7 +1,9 @@
 import main from '../lib/main';
 
+const DATA_DIR = './tests/data';
+
 function resolve(file: string = ''): string {
-  return `./tests/data/${file}`;
+  return `${DATA_DIR}/${file}`;
 }
 
 describe('validateFile', () => {
@@ -32,6 +34,9 @@ describe('validateFile', () => {
 describe('validateDirectory', () => {
   test('validateFileAsync resolved', async () => {
     await expect(main.validateDirectoryAsync(resolve(), {root: {child: {'b.txt': 'test'}}})).resolves.toBeUndefined();
+  });
+  test('validateFileAsync (relative path) resolved', async () => {
+    await expect(main.validateDirectoryAsync(DATA_DIR, {root: {child: {'b.txt': 'test'}}})).resolves.toBeUndefined();
   });
   test('validateFileAsync rejected', async () => {
     await expect(main.validateDirectoryAsync(resolve(), {root: {child: {'b.txt': '__'}}})).rejects.toThrow();
