@@ -1,7 +1,7 @@
 {
   "name": "fx54-node",
   "version": "0.0.1",
-  "description": "Verify existence or content of files in a hierarchical object",
+  "description": "Verify existence or content of files with a hierarchical object",
   "main": "dist/lib/main.js",
   "types": "dist/lib/main.d.ts",
   "author": "Mgen (https://www.mgenware.com)",
