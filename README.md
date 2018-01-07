@@ -1,8 +1,8 @@
 # fx54-node
 
 [![Build Status](https://travis-ci.org/mgenware/fx54-node.svg?branch=master)](http://travis-ci.org/mgenware/fx54-node)
-[![npm version](https://badge.fury.io/js/fx54.svg)](https://badge.fury.io/js/fx54)
-[![Node.js Version](http://img.shields.io/node/v/fx54.svg)](https://nodejs.org/en/)
+[![npm version](https://badge.fury.io/js/fx54-node.svg)](https://badge.fury.io/js/fx54-node)
+[![Node.js Version](http://img.shields.io/node/v/fx54-node.svg)](https://nodejs.org/en/)
 
 Verify existence or content of files with a hierarchical object.
 
