@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/fx54-node.svg)](https://badge.fury.io/js/fx54-node)
 [![Node.js Version](http://img.shields.io/node/v/fx54-node.svg)](https://nodejs.org/en/)
 
-Verify existence or content of files with a hierarchical object.
+Verify the existence or content of files with a hierarchical object.
 
 ## Installation
 ```sh
@@ -17,7 +17,7 @@ yarn test
 ```
 
 ## Example
-Directory structure:
+Assume a directory like this:
 ```
 - root
   - dir1
@@ -29,6 +29,7 @@ Directory structure:
 Example code:
 ```javascript
 import validator from 'fx54-node';
+// Or Node.js style: const validator = require('fx54-node').default'
 
 try {
   await validator.validateDirectoryAsync('./root', {
@@ -51,7 +52,7 @@ try {
 
 * `async validateFileAsync(path: string, value: any)`: validates a file with a possible value.
   * `string` value: tests equality of the contents of file.
-  * `boolean` value: tests existence of the file.
+  * `boolean` value: verifies existence of the file.
 
 * `async validateDirectoryAsync(path: string, obj: any)`: validates a directory with a hierarchical object. For example:
 ```javascript
