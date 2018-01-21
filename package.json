@@ -1,6 +1,6 @@
 {
   "name": "fx54-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Verify existence or content of files with a hierarchical object",
   "main": "dist/lib/main.js",
   "types": "dist/lib/main.d.ts",
@@ -19,7 +19,7 @@
     "@types/jest": "^22.0.1",
     "@types/node": "*",
     "copyfiles": "*",
-    "jest": "^22.0.4",
+    "jest": "^22.1.4",
     "tslint": "*",
     "typescript": "*"
   },
@@ -40,6 +40,12 @@
   },
   "dependencies": {
     "isobject": "^3.0.1",
-    "m-fs": "^1.0.1"
-  }
+    "m-fs": "^1.0.2"
+  },
+  "files": [
+    "dist/lib",
+    ".gitignore",
+    "README.md",
+    "package.json"
+  ]
 }

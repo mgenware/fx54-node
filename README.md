@@ -1,5 +1,6 @@
 # fx54-node
 
+[![MEAN Module](https://img.shields.io/badge/MEAN%20Module-TypeScript-blue.svg)](https://github.com/mgenware/MEAN-Module)
 [![Build Status](https://travis-ci.org/mgenware/fx54-node.svg?branch=master)](http://travis-ci.org/mgenware/fx54-node)
 [![npm version](https://badge.fury.io/js/fx54-node.svg)](https://badge.fury.io/js/fx54-node)
 [![Node.js Version](http://img.shields.io/node/v/fx54-node.svg)](https://nodejs.org/en/)
