@@ -3,11 +3,11 @@ import { Buffer } from 'buffer';
 
 export default class Checker {
   static isBoolean(value: any): boolean {
-    return typeof(value) === 'boolean';
+    return typeof value === 'boolean';
   }
 
   static isString(value: any): boolean {
-    return typeof(value) === 'string';
+    return typeof value === 'string';
   }
 
   static isObject(value: any): boolean {

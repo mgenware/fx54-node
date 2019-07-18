@@ -9,11 +9,17 @@ export default class Validator {
     } else if (checker.isBoolean(value)) {
       await this.validateBoolAsync(path, value as boolean);
     } else {
-      throw new Error(`Unsupported value: ${value ? value.toString() : '<Empty>'}`);
+      throw new Error(
+        `Unsupported value: ${value ? value.toString() : '<Empty>'}`,
+      );
     }
   }
 
-  async validateDirectoryAsync(path: string, obj: any, logger: ((path: string, isFile: boolean) => void)|null = null) {
+  async validateDirectoryAsync(
+    path: string,
+    obj: any,
+    logger: ((path: string, isFile: boolean) => void) | null = null,
+  ) {
     const keys = Object.keys(obj);
     for (const k of keys) {
       const value = obj[k];
@@ -50,6 +56,8 @@ export default class Validator {
   }
 
   private throwFailedError(file: string, reqType: string, reqContent: any) {
-    throw new Error(`Test failed. [File: ${file}] [Required type: ${reqType}] [Required content: ${reqContent}]`);
+    throw new Error(
+      `Test failed. [File: ${file}] [Required type: ${reqType}] [Required content: ${reqContent}]`,
+    );
   }
 }
