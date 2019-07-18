@@ -8,35 +8,39 @@
 Verify the existence or content of files with a hierarchical object.
 
 ## Installation
+
 ```sh
 yarn add fx54-node
 ```
 
 ### Run tests
+
 ```sh
 yarn test
 ```
 
 ## Example
+
 Assume a directory like this:
+
 ```
 - root
   - dir1
-    a.txt 
+    a.txt
   - dir2
     b.txt
 ```
 
 Example code:
+
 ```javascript
 import validator from 'fx54-node';
-// Or Node.js style: const validator = require('fx54-node').default'
 
 try {
   await validator.validateDirectoryAsync('./root', {
     dir1: {
       'a.txt': '<contents of a.txt>', // check the contents of a.txt
-      'b.txt': false // make sure b.txt doesn't exist
+      'b.txt': false, // make sure b.txt doesn't exist
     },
     dir2: {
       'b.txt': true, // make sure b.txt exists
@@ -51,11 +55,13 @@ try {
 
 ## API
 
-* `async validateFileAsync(path: string, value: any)`: validates a file with a possible value.
-  * `string` value: tests equality of the contents of file.
-  * `boolean` value: verifies existence of the file.
+- `async validateFileAsync(path: string, value: any)`: validates a file with a possible value.
 
-* `async validateDirectoryAsync(path: string, obj: any)`: validates a directory with a hierarchical object. For example:
+  - `string` value: tests equality of the contents of file.
+  - `boolean` value: verifies existence of the file.
+
+- `async validateDirectoryAsync(path: string, obj: any)`: validates a directory with a hierarchical object. For example:
+
 ```javascript
 {
   dirA: {
