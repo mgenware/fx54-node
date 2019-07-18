@@ -42,7 +42,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "isobject": "^3.0.1",
+    "isobject": "^4.0.0",
     "m-fs": "^2.3.1"
   },
   "files": [
